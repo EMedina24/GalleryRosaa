@@ -12,7 +12,7 @@ const MainPage = () => {
   return (
     <>
       <Header />
-      <div className="p-5">
+      <div className="lg:p-5 xl:p-5 2xl:p-5 ">
         <Hero />
       </div>
       <Gallery />
