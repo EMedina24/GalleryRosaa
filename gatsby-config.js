@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Echelon Commercial`,
-    description: ``,
-    author: `@gatsbyjs`,
+    title: `Galleria La Rosa`,
+    description: `Fine Art`,
+    author: `Edgardo J Medina`,
   },
   plugins: [
     {

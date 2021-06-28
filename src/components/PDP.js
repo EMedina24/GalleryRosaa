@@ -5,7 +5,8 @@ import { useCartItems } from "gatsby-theme-shopify-manager";
 import { useState } from "react";
 import logo from "../assets/images/logos.png";
 
-const PDP = () => {
+const PDP = ({productInfo}) => {
+  console.log(productInfo.images[0].originalSrc)
   return (
     <>
       <section class="text-gray-600 body-font overflow-hidden">
@@ -14,14 +15,14 @@ const PDP = () => {
             <img
               alt="ecommerce"
               class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://dummyimage.com/400x400"
+              src={productInfo.images[0].originalSrc}
             />
             <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 class="text-sm title-font text-gray-500 tracking-widest">
-                BRAND NAME
+       Rosa Elenas Art
               </h2>
               <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">
-                The Catcher in the Rye
+               {productInfo.title}
               </h1>
               <div class="flex mb-4">
                 <span class="flex items-center">
@@ -122,12 +123,7 @@ const PDP = () => {
                 </span>
               </div>
               <p class="leading-relaxed">
-                Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-                sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-                juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-                seitan poutine tumeric. Gastropub blue bottle austin listicle
-                pour-over, neutra jean shorts keytar banjo tattooed umami
-                cardigan.
+                {productInfo.description}
               </p>
               <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div class="flex">
@@ -163,7 +159,7 @@ const PDP = () => {
               </div>
               <div class="flex">
                 <span class="title-font font-medium text-2xl text-gray-900">
-                  $58.00
+               {productInfo.priceRange.maxVariantPrice.amount}
                 </span>
                 <button class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">
                   Button

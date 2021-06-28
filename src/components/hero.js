@@ -25,7 +25,7 @@ const Hero = ({ pageData }) => {
             <div>
               <a
                 href=""
-                class="bg-red-500 rounded-md font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-red-600 ml-2"
+                class="bg-transparent border-solid border-2 border-white font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-red-600 ml-2"
               >
                 Shop collections
               </a>
